@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Inhoud schuift</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    #toggleMenu:checked ~ main {
+      margin-left: 10em;
+    }
+
+    #toggleLabel::before {
+      content: "\2630";
+      cursor: pointer;
+    }
+
+    #toggleMenu:checked ~ main #toggleLabel::before {
+      content: "\2715";
+    }
+
+    nav{
+      position: fixed;
+    }
+
+    main {
+      position: absolute;
+      margin-left: 0;
+      transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+    }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="toggleMenu">
+    <nav>
+      <h4>menu</h4>
+      <ul>
+        <li>
+          <a href="index.html" class="actief">inhoud schuift</a>
+        </li>
+        <li>
+          <a href="index.html">menu schuift</a>
+        </li>
+        <li>
+          <a href="index.html">alles schuift</a>
+        </li>
+        <ul>
+    </nav>
+
+    <main>
+      <label for="toggleMenu" id="toggleLabel"></label>
+      <h1>Russia has banned a festival celebrating gay fish.</h1>
+      <p><img src="img/help.png"></p>
+      <p>The Arkhangelsk local authorities has banned a rally in the city in honor of gay smelt – a type of small fish – which was being planned for 25 January.
+         Gay rights activists were hoping to hold ‘gay fish’ banners and placards, as well as calling for a ban on overfishing this staple of the Russian diet.
+         This isn’t completely crazy. St Petersburg holds an annual Festival of Smelt every May which has been held off-and-on for over 300 years.
+         While the idea of honoring gay fish is clearly intended to be a joke, it was also actually pretty cunning.
+      </p>
+      <footer class="validatie"></footer>
+    </main>
+  </body>
+</html>
